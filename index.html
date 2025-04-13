@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Harish's Portfolio</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #dde5ed, #ffffff);
+      color: #333;
+    }
+    header {
+      background:hsl(211, 31%, 43%);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+    nav {
+      background: #23325c;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 10px 20px;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00adb5;
+    }
+    section {
+      max-width: 1000px;
+      margin: 50px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+    section h2 {
+      color: #1f3c88;
+      margin-bottom: 20px;
+      text-align: center; /* Center the About Me title */
+    }
+
+    /* Updated CSS for About Me section */
+    #about {
+      display: flex;
+      align-items: center; /* Align profile picture and content horizontally */
+      gap: 30px; /* Space between image and text */
+      margin-top: 40px;
+    }
+
+    .profile-photo img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #1f3c88;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    #about p {
+      max-width: 600px;
+      text-align: left; /* Align text to the left */
+    }
+
+    .skills, .projects, .hobbies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .card {
+      flex: 1 1 250px;
+      background: #f0f0f0;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+    }
+    footer {
+      background: #2c3650;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    button {
+      background: #1f3c88;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #00adb5;
+    }
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 140px;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -70px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+    @media (max-width: 768px) {
+      .skills, .projects, .hobbies {
+        flex-direction: column;
+      }
+      #about {
+        flex-direction: column; /* Stack image and content for smaller screens */
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Harish's Portfolio</h1>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#education">Education</a>
+  <a href="#hobbies">Hobbies</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main>
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="profile-photo">
+      <img src="photo.jpg" alt="Harish's Photo">
+    </div>
+    <p>Hello! I'm <strong>Harish</strong>, a passionate Software Engineering student at MIT AOE. I'm deeply curious about blockchain, Web3, and Layer 1 technologies. I love experimenting with new tech and creating engaging digital experiences!</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="card tooltip">
+        <h3>Programming</h3>
+        <p>Skilled in C, C++, HTML, CSS. Currently exploring Python and JavaScript.</p>
+        <span class="tooltiptext">Learning Full Stack Next!</span>
+      </div>
+      <div class="card tooltip">
+        <h3>Blockchain</h3>
+        <p>Understanding fundamentals of blockchain, smart contracts, and cryptocurrency systems.</p>
+        <span class="tooltiptext">Building my own token!</span>
+      </div>
+      <div class="card tooltip">
+        <h3>Video Editing</h3>
+        <p>Experienced with tools like Filmora and CapCut for editing and animation.</p>
+        <span class="tooltiptext">Love storytelling!</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Pollution & Aquatic Life</h3>
+        <p>Led a campaign to spread awareness about water pollution. Combined online and offline events with a team of 5.</p>
+      </div>
+        <div class="card">
+          <h3>My Linux Project</h3>
+          <p>Created a simple random password generated .</p>
+        </div>
+      </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <p><strong>B.Tech in Software Engineering</strong> — MIT Academy of Engineering<br>2024 - Present</p>
+    <p><strong>12th Grade</strong> — Shastri Memorial School, Jammu<br>Completed in 2023</p>
+    <p><strong>10th Grade</strong> — RMCS School, Jammu<br>Completed in 2021</p>
+  </section>
+  
+
+  <section id="hobbies">
+    <h2>Hobbies</h2>
+    <div class="hobbies">
+      <div class="card"><p>Gaming 🎮</p></div>
+      <div class="card"><p>Exploring Blockchain 🔗</p></div>
+      <div class="card"><p>Video Editing 🎬</p></div>
+      <div class="card"><p>Reading Tech Blogs 📚</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> khajuriaharish60@gmail.com</p>
+    <p><strong>Phone:</strong> +91 6005202981</p>
+    <button onclick="alert('Thanks for visiting my portfolio! 😊')">Say Hi!</button>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 Harish's Portfolio | Made with ❤️</p>
+</footer>
+
+</body>
+</html>
